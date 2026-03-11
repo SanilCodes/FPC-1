@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlinkMarket - Product Details</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Header based on wireframe -->
+  <header class="top-header">
+    <div class="container header-inner">
+      <div class="logo-section">
+        <!-- The 4 photos replacing the logo section -->
+        <div class="header-logos">
+          <img src="assets\WhatsApp Image 2026-03-11 at 2.33.21 PM.jpeg" alt="Krushi Mitra" class="partner-logo">
+          <img src="assets\WhatsApp Image 2026-03-11 at 2.33.20 PM.jpeg" alt="Uday Nayi Subhah" class="partner-logo">
+          <img src="assets\WhatsApp Image 2026-03-11 at 2.33.19 PM.jpeg" alt="Yuva Mitra" class="partner-logo">
+          <img src="assets\WhatsApp Image 2026-03-11 at 2.32.01 PM (1).jpeg" alt="Krishi Vikas FPC"
+            class="partner-logo">
+        </div>
+      </div>
+
+      <div class="nav-actions">
+        <button class="text-btn"><i class="fa-solid fa-user"></i> Login</button>
+        <button class="btn-cart"><i class="fa-solid fa-cart-shopping"></i> My Cart</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container fade-in">
+      <div class="product-details-container" style="margin-top: 24px;">
+        <!-- Left: Image Gallery -->
+        <div class="gallery-section">
+          <div class="main-image-container">
+            <button class="gallery-nav nav-prev" id="btnPrev" onclick="prevImage()">
+              &lang;
+            </button>
+            <img src="" id="mainImage" class="main-image" alt="photo" style="transition: opacity 0.15s ease;">
+            <button class="gallery-nav nav-next" id="btnNext" onclick="nextImage()">
+              &rang;
+            </button>
+          </div>
+          <div class="gallery-dots">
+            <span class="dot"></span>
+            Ratings
+          </div>
+        </div>
+
+        <!-- Right: Details -->
+        <div class="info-section">
+          <h1 class="details-title" id="pName">Name</h1>
+          <p class="details-specs" id="pSpecs">Specifications</p>
+          <p class="details-specs" style="margin-top: -12px; margin-bottom: 24px;">Quantity Unit</p>
+
+          <div class="variant-selector">
+            <div class="variant-options" id="variantOptions">
+              <!-- JS Injected -->
+            </div>
+          </div>
+
+          <button class="btn-add-large" onclick="alert('Added to cart!')">
+            ADD TO CART
+          </button>
+        </div>
+      </div>
+
+      <!-- Related Product container matching wireframe -->
+      <div class="related-wrapper" style="position:relative; margin-top: 48px;">
+        <div class="product-grid" id="relatedGrid">
+          <!-- JS Injected -->
+        </div>
+        <div class="related-badge">Related product</div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
