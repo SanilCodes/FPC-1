@@ -4,7 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BlinkMarket - Home</title>
+  <title>FPC - Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -25,9 +28,20 @@
         </div>
       </div>
 
+      <div class="header-title">
+        <h1>FARMER PRODUCER COMPANY</h1>
+      </div>
+
       <div class="nav-actions">
-        <button class="text-btn"><i class="fa-solid fa-user"></i> Login</button>
-        <button class="btn-cart"><i class="fa-solid fa-cart-shopping"></i> My Cart</button>
+        <button class="text-btn bubbles"><span class="text"><i class="fa-solid fa-user"></i> Login</span></button>
+        <button class="btn-cart-anim">
+          <div>
+            <div class="cart-icon">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+          </div>
+          My Cart
+        </button>
       </div>
     </div>
   </header>
@@ -36,7 +50,17 @@
   <section class="search-section">
     <div class="container">
       <div class="search-bar-wrap">
-        <input type="text" class="search-bar main-search" placeholder="search bar">
+        <div class="form-control">
+          <input class="input input-alt main-search" placeholder="Search" required="" type="text">
+          <span class="input-border input-border-alt"></span>
+        </div>
+      </div>
+
+      <!-- Category Tabs -->
+      <div class="category-tabs">
+        <button class="cat-tab active" data-category="vegetables">Vegetables</button>
+        <button class="cat-tab" data-category="exotic">Exotic Vegetables</button>
+        <button class="cat-tab" data-category="fruits">Fruits</button>
       </div>
     </div>
   </section>
@@ -44,8 +68,10 @@
   <!-- Main Product Grid -->
   <main>
     <div class="container fade-in">
-      <div class="product-grid" id="productGrid">
-        <!-- Injected via JS -->
+      <div class="grid-animation-wrapper">
+        <div class="product-grid" id="productGrid">
+          <!-- Injected via JS -->
+        </div>
       </div>
     </div>
   </main>

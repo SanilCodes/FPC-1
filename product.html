@@ -2,9 +2,11 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BlinkMarket - Product Details</title>
+  <title>FPC - Product Details</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -21,12 +23,22 @@
           <img src="assets\WhatsApp Image 2026-03-11 at 2.33.19 PM.jpeg" alt="Yuva Mitra" class="partner-logo">
           <img src="assets\WhatsApp Image 2026-03-11 at 2.32.01 PM (1).jpeg" alt="Krishi Vikas FPC"
             class="partner-logo">
-        </div>
+      </div>
+
+      <div class="header-title">
+        <h1>FARMER PRODUCER COMPANY</h1>
       </div>
 
       <div class="nav-actions">
-        <button class="text-btn"><i class="fa-solid fa-user"></i> Login</button>
-        <button class="btn-cart"><i class="fa-solid fa-cart-shopping"></i> My Cart</button>
+        <button class="text-btn bubbles"><span class="text"><i class="fa-solid fa-user"></i> Login</span></button>
+        <button class="btn-cart-anim">
+          <div>
+            <div class="cart-icon">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+          </div>
+          My Cart
+        </button>
       </div>
     </div>
   </header>
@@ -54,8 +66,8 @@
         <!-- Right: Details -->
         <div class="info-section">
           <h1 class="details-title" id="pName">Name</h1>
+          <div class="price" style="font-size: 1.5rem; margin-bottom: 8px;">₹0</div>
           <p class="details-specs" id="pSpecs">Specifications</p>
-          <p class="details-specs" style="margin-top: -12px; margin-bottom: 24px;">Quantity Unit</p>
 
           <div class="variant-selector">
             <div class="variant-options" id="variantOptions">

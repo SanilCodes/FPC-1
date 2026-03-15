@@ -9,10 +9,42 @@
   --bg-color: #ffffff;
   --surface-color: #ffffff;
   --text-main: #333333;
-  --border-color: #333333; /* Darker border to match wireframe ink */
+  --border-color: #333333;
   
-  --font-family: 'Inter', system-ui, sans-serif;
-  --transition-fast: 0.15s ease-in-out;
+  /* Dynamic Theme Variables */
+  --theme-primary: var(--primary-green);
+  --theme-bg: var(--bg-color);
+  
+  --font-family: 'Outfit', system-ui, sans-serif;
+  --transition-fast: 0.2s ease-in-out;
+  --transition-swipe: 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+body {
+  background-color: var(--theme-bg);
+  transition: background-color var(--transition-swipe);
+}
+
+/* Theme Classes applied to body */
+body.theme-vegetables {
+  --theme-primary: #6fb07f;
+  --theme-bg: #eef6f1; /* More tinted green */
+  --theme-border: #a4ceb0;
+  --theme-gradient: linear-gradient(90deg, #6fb07f 0%, #a4ceb0 50%, #4a8758 100%);
+}
+
+body.theme-exotic {
+  --theme-primary: #8b5db0;
+  --theme-bg: #f4ecf8; /* More tinted purple */
+  --theme-border: #c9b1de;
+  --theme-gradient: linear-gradient(90deg, #8b5db0 0%, #c9b1de 50%, #593575 100%);
+}
+
+body.theme-fruits {
+  --theme-primary: #fca311;
+  --theme-bg: #fff5e6; /* More tinted orange */
+  --theme-border: #fcd28e;
+  --theme-gradient: linear-gradient(90deg, #fca311 0%, #fcd28e 50%, #d68700 100%);
 }
 
 *, *::before, *::after {
@@ -57,8 +89,10 @@ img {
    Header (Wireframe exact layout)
    ========================================================================== */
 .top-header {
-  border-bottom: 1.5px solid var(--border-color);
+  border-bottom: 2px solid var(--theme-primary);
+  box-shadow: 0 4px 15px -3px rgba(0,0,0,0.05);
   padding: 16px 0;
+  transition: border-color var(--transition-swipe);
 }
 
 .header-inner {
@@ -70,18 +104,33 @@ img {
 .logo-section {
   display: flex;
   align-items: center;
+  margin-left: -20px; /* Shift leftwards */
 }
 
 .header-logos {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
 }
 
 .partner-logo {
-  height: 56px;
+  height: 68px; /* Increased from 56px */
   width: auto;
   object-fit: contain;
+}
+
+.header-title {
+  flex-grow: 1;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.header-title h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .nav-actions {
@@ -91,34 +140,164 @@ img {
 }
 
 .text-btn {
-  border: 1.5px solid var(--border-color);
-  border-right: none;
-  padding: 10px 24px;
+  /* Inherit existing flex styles */
+  display: flex;
+  align-items: center;
   font-weight: 500;
+  border-right: none;
+}
+
+.text-btn:hover {
+  background-color: transparent; /* Reset default hover */
+}
+
+/* Animated Cart Button */
+.btn-cart-anim {
+  --color: #fff;
+  --background: var(--theme-primary);
+  --background-hover: var(--theme-primary);
+  --background-left: rgba(0,0,0,0.15);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  border-radius: 0 30px 30px 0;
   font-size: 1rem;
+  font-family: var(--font-family);
+  font-weight: 600;
+  padding: 10px 24px 10px 64px;
+  transition: all 0.3s;
+  color: var(--color);
+  background: var(--background);
+  display: flex;
+  align-items: center;
+}
+
+.btn-cart-anim > div {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 48px;
+  position: absolute;
+  overflow: hidden;
+  background: var(--background-left);
+}
+
+.btn-cart-anim .cart-icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transform: translateX(var(--fx, 0));
+  transition: transform 0.4s cubic-bezier(0.42, 0, 0.58, 1.00) var(--fd, 0.3s);
+}
+
+.btn-cart-anim .cart-icon i {
+  font-size: 1.1rem;
+  transform: perspective(120px) rotateY(var(--fr, 0deg));
+  transition: transform 0.3s ease var(--fds, 0.45s);
+}
+
+.btn-cart-anim:before, .btn-cart-anim:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--color);
+  transform-origin: 9px 1px;
+  transform: translateX(var(--cx, 0)) scale(0.5) rotate(var(--r, -45deg));
+  top: 50%;
+  right: 16px;
+  margin-top: -1px;
+  transition: transform 0.3s;
+}
+
+.btn-cart-anim:after {
+  --r: 45deg;
+}
+
+.btn-cart-anim:hover {
+  --cx: 2px;
+  --fx: -48px;
+  --fr: -60deg;
+  --fd: 0.15s;
+  --fds: 0s;
+  filter: brightness(1.1);
+}
+
+/* From Uiverse.io by nikk7007 */ 
+.bubbles {
+  --c1: white;
+  --c2: var(--theme-primary);
+  --size-letter: 16px;
+  padding: 0.5em 1.5em;
+  font-size: var(--size-letter);
+
+  background-color: transparent;
+  border: 1.5px solid var(--border-color); /* Match header border */
+  border-right: none;
+  cursor: pointer;
+
+  overflow: hidden;
+  position: relative;
+  transition: 300ms cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+.bubbles > .text {
+  font-weight: 500;
+  color: var(--text-main);
+  position: relative;
+  z-index: 1;
+  transition: color 700ms cubic-bezier(0.83, 0, 0.17, 1);
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.btn-cart {
-  border: 1.5px solid var(--border-color);
-  padding: 10px 24px;
-  border-radius: 0 24px 24px 0;
-  font-weight: 600;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background-color: var(--primary-green);
-  color: white;
-  border-color: var(--primary-green);
+.bubbles::before {
+  top: 0;
+  left: 0;
 }
-.btn-cart:hover {
-  background-color: var(--primary-green-hover);
+
+.bubbles::after {
+  top: 100%;
+  left: 100%;
 }
-.text-btn:hover {
-  background-color: #f0f0f0;
+
+.bubbles::before,
+.bubbles::after {
+  content: "";
+  width: 150%;
+  aspect-ratio: 1/1;
+  scale: 0;
+  transition: 1000ms cubic-bezier(0.76, 0, 0.24, 1);
+
+  background-color: var(--c2);
+  border-radius: 50%;
+
+  position: absolute;
+  translate: -50% -50%;
+}
+
+.bubbles:hover {
+  border-color: var(--c2);
+}
+
+.bubbles:hover > .text {
+  color: var(--c1);
+}
+
+.bubbles:hover::before,
+.bubbles:hover::after {
+  scale: 1;
+}
+
+.bubbles:active {
+  scale: 0.98;
+  filter: brightness(0.9);
 }
 
 /* ==========================================================================
@@ -135,19 +314,122 @@ img {
   justify-content: center;
 }
 
-.main-search {
+.form-control {
+  position: relative;
   width: 100%;
   max-width: 800px;
-  padding: 16px 24px;
-  border-radius: 30px;
-  border: 1.5px solid var(--border-color);
-  text-align: center;
-  font-size: 1.1rem;
-  outline: none;
+  display: flex;
+  justify-content: center;
 }
-.main-search:focus {
-  border-color: var(--primary-green);
-  box-shadow: 0 0 0 1px var(--primary-green);
+
+.input {
+  color: var(--text-main);
+  font-size: 1.1rem;
+  background-color: white;
+  width: 300px; /* Initial small width */
+  box-sizing: border-box;
+  padding-inline: 1.5em;
+  padding-block: 0.8em;
+  border: none;
+  border-bottom: 2px solid var(--theme-border);
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: width 0.4s cubic-bezier(0.42, 0, 0.58, 1.00);
+}
+
+.input:focus {
+  outline: none;
+  width: 100%; /* Expands to full container */
+}
+
+.input-border {
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--theme-gradient);
+  transition: width 0.4s cubic-bezier(0.42, 0, 0.58, 1.00);
+  border-radius: 0 0 30px 30px;
+}
+
+.input:focus ~ .input-border {
+  width: 100%;
+}
+
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.cat-tab {
+  padding: 10px 24px;
+  border-radius: 25px;
+  border: 1.5px solid var(--border-color);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--text-main);
+  background-color: transparent;
+  transition: all var(--transition-fast);
+}
+
+.cat-tab:hover {
+  background-color: rgba(0,0,0,0.05);
+}
+
+.cat-tab.active {
+  background-color: var(--theme-primary);
+  color: white;
+  border-color: var(--theme-primary);
+}
+
+/* Animations */
+.grid-animation-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 24px;
+  padding: 32px 0 64px;
+  transition: transform var(--transition-swipe), opacity 0.3s ease;
+}
+
+.slide-out-left {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.slide-out-right {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.slide-in-right {
+  transform: translateX(100%);
+  opacity: 0;
+  animation: slideInR var(--transition-swipe) forwards;
+}
+
+.slide-in-left {
+  transform: translateX(-100%);
+  opacity: 0;
+  animation: slideInL var(--transition-swipe) forwards;
+}
+
+@keyframes slideInR {
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInL {
+  to { transform: translateX(0); opacity: 1; }
 }
 
 
@@ -162,25 +444,27 @@ img {
 }
 
 .product-card {
-  border: 1.5px solid var(--border-color);
+  border: 1.5px solid var(--theme-border);
   border-radius: 16px;
   padding: 16px;
   display: flex;
   flex-direction: column;
-  transition: transform var(--transition-fast);
+  transition: transform var(--transition-fast), border-color var(--transition-swipe);
   background-color: #fff;
 }
 .product-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border-color: var(--theme-primary);
 }
 
 .card-image-wrap {
-  border: 1.5px solid var(--border-color);
+  border: none;
   border-radius: 12px;
   padding-top: 80%;
   position: relative;
   margin-bottom: 16px;
+  overflow: hidden;
 }
 
 .card-image {
@@ -240,9 +524,9 @@ img {
   margin-left: 8px;
 }
 .btn-add:hover {
-  background-color: var(--primary-green);
+  background-color: var(--theme-primary);
   color: white;
-  border-color: var(--primary-green);
+  border-color: var(--theme-primary);
 }
 .btn-add:hover::before {
   background-color: white;
