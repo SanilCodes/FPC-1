@@ -1,40 +1,40 @@
 // Mock Data for Products
 const products = [
   // --- Vegetables ---
-  { id: 1, category: 'vegetables', name: "Beetroot (Beet)", specs: "500 g", price: "₹45", images: ["../project ASSETS/vegetables/Beetroot.jpg"] },
-  { id: 2, category: 'vegetables', name: "Bottle Gourd (Dudhi Bhopla)", specs: "1 pc", price: "₹35", images: ["../project ASSETS/vegetables/bhopla.jpg"] },
-  { id: 3, category: 'vegetables', name: "Striped Brinjal (Vangi)", specs: "500 g", price: "₹40", images: ["../project ASSETS/vegetables/Brinjal.jpg"] },
-  { id: 4, category: 'vegetables', name: "Long Brinjal (Vangi)", specs: "500 g", price: "₹38", images: ["../project ASSETS/vegetables/Brinjal.png"] },
-  { id: 5, category: 'vegetables', name: "Cabbage (Kobi)", specs: "1 pc", price: "₹30", images: ["../project ASSETS/vegetables/Cabbage.jpg"] },
-  { id: 6, category: 'vegetables', name: "Chilli (Mirchi)", specs: "200 g", price: "₹20", images: ["../project ASSETS/vegetables/CHILLI.jpg"] },
-  { id: 7, category: 'vegetables', name: "Okra (Bhendi)", specs: "500 g", price: "₹40", images: ["../project ASSETS/vegetables/Okra.jpg"] },
-  { id: 8, category: 'vegetables', name: "Potato (Batata)", specs: "1 kg", price: "₹30", images: ["../project ASSETS/vegetables/Potato.jpg"] },
-  { id: 9, category: 'vegetables', name: "Tomato (Tamatar/Belati)", specs: "1 kg", price: "₹40", images: ["../project ASSETS/vegetables/Tomato.jpg"] },
-  { id: 10, category: 'vegetables', name: "Cauliflower (Phul Gobi)", specs: "1 pc", price: "₹35", images: ["../project ASSETS/vegetables/cauliflower.jpg"] },
-  { id: 25, category: 'vegetables', name: "Carrot (Gajar)", specs: "500 g", price: "₹30", images: ["../project ASSETS/vegetables/carrot.jpg"] },
-  { id: 26, category: 'vegetables', name: "Onion (Kanda)", specs: "1 kg", price: "₹45", images: ["../project ASSETS/vegetables/onion.jpg"] },
-  { id: 27, category: 'vegetables', name: "Lemon (Limbu)", specs: "5 pcs", price: "₹20", images: ["../project ASSETS/vegetables/lemon.jpg"] },
-  { id: 28, category: 'vegetables', name: "Ivy Gourd (Tondli)", specs: "250 g", price: "₹25", images: ["../project ASSETS/vegetables/tondali.jpg"] },
-  { id: 29, category: 'vegetables', name: "Ginger (Aale)", specs: "100 g", price: "₹15", images: ["../project ASSETS/vegetables/ginger.jpg"] },
+  { id: 1, category: 'vegetables', name: "Beetroot (Beet)", specs: "500 g", price: "₹45", images: ["assets/Beetroot.jpg"] },
+  { id: 2, category: 'vegetables', name: "Bottle Gourd (Dudhi Bhopla)", specs: "1 pc", price: "₹35", images: ["assets/bhopla.jpg"] },
+  { id: 3, category: 'vegetables', name: "Striped Brinjal (Vangi)", specs: "500 g", price: "₹40", images: ["assets/Brinjal.jpg"] },
+  { id: 4, category: 'vegetables', name: "Long Brinjal (Vangi)", specs: "500 g", price: "₹38", images: ["assets/Brinjal.png"] },
+  { id: 5, category: 'vegetables', name: "Cabbage (Kobi)", specs: "1 pc", price: "₹30", images: ["assets/Cabbage.jpg"] },
+  { id: 6, category: 'vegetables', name: "Chilli (Mirchi)", specs: "200 g", price: "₹20", images: ["assets/CHILLI.jpg"] },
+  { id: 7, category: 'vegetables', name: "Okra (Bhendi)", specs: "500 g", price: "₹40", images: ["assets/Okra.jpg"] },
+  { id: 8, category: 'vegetables', name: "Potato (Batata)", specs: "1 kg", price: "₹30", images: ["assets/Potato.jpg"] },
+  { id: 9, category: 'vegetables', name: "Tomato (Tamatar/Belati)", specs: "1 kg", price: "₹40", images: ["assets/Tomato.jpg"] },
+  { id: 10, category: 'vegetables', name: "Cauliflower (Phul Gobi)", specs: "1 pc", price: "₹35", images: ["assets/cauliflower.jpg"] },
+  { id: 25, category: 'vegetables', name: "Carrot (Gajar)", specs: "500 g", price: "₹30", images: ["assets/carrot.jpg"] },
+  { id: 26, category: 'vegetables', name: "Onion (Kanda)", specs: "1 kg", price: "₹45", images: ["assets/onion.jpg"] },
+  { id: 27, category: 'vegetables', name: "Lemon (Limbu)", specs: "5 pcs", price: "₹20", images: ["assets/lemon.jpg"] },
+  { id: 28, category: 'vegetables', name: "Ivy Gourd (Tondli)", specs: "250 g", price: "₹25", images: ["assets/tondali.jpg"] },
+  { id: 29, category: 'vegetables', name: "Ginger (Aale)", specs: "100 g", price: "₹15", images: ["assets/ginger.jpg"] },
 
-  
+
   // --- Exotic Vegetables ---
-  { id: 11, category: 'exotic', name: "Broccoli (Broccoli)", specs: "1 pc", price: "₹80", images: ["../project ASSETS/exotic vegetables/broccoli.jpg"] },
-  { id: 12, category: 'exotic', name: "Zucchini (Zuccini)", specs: "500 g", price: "₹90", images: ["../project ASSETS/exotic vegetables/zucchini.jpg"] },
-  { id: 13, category: 'exotic', name: "Red/Yellow Capsicum (Dhobli Mirchi)", specs: "2 pcs", price: "₹120", images: ["../project ASSETS/exotic vegetables/rednyellowcapsicum.jpg"] },
-  { id: 14, category: 'exotic', name: "Iceberg Lettuce (Lettuce)", specs: "1 pc", price: "₹70", images: ["../project ASSETS/exotic vegetables/iceburg.jpg"] },
-  { id: 15, category: 'exotic', name: "Red Cabbage (Lal Kobi)", specs: "1 pc", price: "₹65", images: ["../project ASSETS/exotic vegetables/redcabbage.jpg"] },
-  { id: 16, category: 'exotic', name: "English Cucumber (Kakdi)", specs: "500 g", price: "₹55", images: ["../project ASSETS/exotic vegetables/englishcucumber.jpg"] },
-  { id: 17, category: 'exotic', name: "Khira Cucumber (Gavran Kakdi)", specs: "500 g", price: "₹45", images: ["../project ASSETS/exotic vegetables/khiracucumber.jpg"] },
-  
+  { id: 11, category: 'exotic', name: "Broccoli (Broccoli)", specs: "1 pc", price: "₹80", images: ["assets/broccoli.jpg"] },
+  { id: 12, category: 'exotic', name: "Zucchini (Zuccini)", specs: "500 g", price: "₹90", images: ["assets/zucchini.jpg"] },
+  { id: 13, category: 'exotic', name: "Red/Yellow Capsicum (Dhobli Mirchi)", specs: "2 pcs", price: "₹120", images: ["assets/rednyellowcapsicum.jpg"] },
+  { id: 14, category: 'exotic', name: "Iceberg Lettuce (Lettuce)", specs: "1 pc", price: "₹70", images: ["assets/iceburg.jpg"] },
+  { id: 15, category: 'exotic', name: "Red Cabbage (Lal Kobi)", specs: "1 pc", price: "₹65", images: ["assets/redcabbage.jpg"] },
+  { id: 16, category: 'exotic', name: "English Cucumber (Kakdi)", specs: "500 g", price: "₹55", images: ["assets/englishcucumber.jpg"] },
+  { id: 17, category: 'exotic', name: "Khira Cucumber (Gavran Kakdi)", specs: "500 g", price: "₹45", images: ["assets/khiracucumber.jpg"] },
+
   // --- Fruits ---
-  { id: 18, category: 'fruits', name: "Watermelon (Kalingad)", specs: "1 pc", price: "₹80", images: ["../project ASSETS/fruits/Watermelon.jpg"] },
-  { id: 19, category: 'fruits', name: "Muskmelon (Kharbuj)", specs: "1 pc", price: "₹70", images: ["../project ASSETS/fruits/Muskmelon.jpg"] },
-  { id: 20, category: 'fruits', name: "Guava (Peru)", specs: "500 g", price: "₹60", images: ["../project ASSETS/fruits/guava.jpg"] },
-  { id: 21, category: 'fruits', name: "Banana (Kele)", specs: "1 Dozen", price: "₹50", images: ["../project ASSETS/fruits/banana.jpg"] },
-  { id: 22, category: 'fruits', name: "Pomegranate (Dalimb)", specs: "500 g", price: "₹120", images: ["../project ASSETS/fruits/pomegrante.jpg"] },
-  { id: 23, category: 'fruits', name: "Papaya (Papai)", specs: "1 pc", price: "₹60", images: ["../project ASSETS/fruits/papaya.jpg"] },
-  { id: 24, category: 'fruits', name: "Mosambi (Mosambi)", specs: "1 kg", price: "₹90", images: ["../project ASSETS/fruits/Mosambi.png"] }
+  { id: 18, category: 'fruits', name: "Watermelon (Kalingad)", specs: "1 pc", price: "₹80", images: ["assets/Watermelon.jpg"] },
+  { id: 19, category: 'fruits', name: "Muskmelon (Kharbuj)", specs: "1 pc", price: "₹70", images: ["assets/Muskmelon.jpg"] },
+  { id: 20, category: 'fruits', name: "Guava (Peru)", specs: "500 g", price: "₹60", images: ["assets/guava.jpg"] },
+  { id: 21, category: 'fruits', name: "Banana (Kele)", specs: "1 Dozen", price: "₹50", images: ["assets/banana.jpg"] },
+  { id: 22, category: 'fruits', name: "Pomegranate (Dalimb)", specs: "500 g", price: "₹120", images: ["assets/pomegrante.jpg"] },
+  { id: 23, category: 'fruits', name: "Papaya (Papai)", specs: "1 pc", price: "₹60", images: ["assets/papaya.jpg"] },
+  { id: 24, category: 'fruits', name: "Mosambi (Mosambi)", specs: "1 kg", price: "₹90", images: ["assets/Mosambi.png"] }
 ];
 
 let currentCategory = 'vegetables';
@@ -84,7 +84,7 @@ function switchCategory(newCategory, activeTabElement) {
   const categoriesMap = { 'vegetables': 0, 'exotic': 1, 'fruits': 2 };
   const oldIndex = categoriesMap[currentCategory];
   const newIndex = categoriesMap[newCategory];
-  
+
   const isMovingRight = newIndex > oldIndex;
   productGrid.classList.add(isMovingRight ? 'slide-out-left' : 'slide-out-right');
 
@@ -98,7 +98,7 @@ function switchCategory(newCategory, activeTabElement) {
 
     productGrid.classList.remove('slide-out-left', 'slide-out-right');
     productGrid.classList.add(isMovingRight ? 'slide-in-right' : 'slide-in-left');
-    
+
     setTimeout(() => {
       productGrid.classList.remove('slide-in-right', 'slide-in-left');
     }, 400);
@@ -107,9 +107,9 @@ function switchCategory(newCategory, activeTabElement) {
 }
 
 function renderProductGrid(productsData, container) {
-  container.innerHTML = ''; 
+  container.innerHTML = '';
   productsData.forEach((product, index) => {
-    const delay = Math.min(index * 20, 300); 
+    const delay = Math.min(index * 20, 300);
     const card = document.createElement('div');
     card.className = 'product-card';
     card.style.animation = `fadeIn 0.3s ease-out ${delay}ms both`;
@@ -141,16 +141,16 @@ function loadProductDetails(id) {
 
   document.getElementById('pName').textContent = currentProduct.name;
   document.getElementById('pSpecs').textContent = currentProduct.specs;
-  
+
   // Update price in details if the element exists
   const priceElement = document.querySelector('.details-title + .price');
   if (priceElement) priceElement.textContent = currentProduct.price;
-  
+
   updateMainImage();
 
   const btnPrev = document.getElementById('btnPrev');
   const btnNext = document.getElementById('btnNext');
-  
+
   if (currentProduct.images.length > 1) {
     btnPrev.style.display = 'flex';
     btnNext.style.display = 'flex';
@@ -189,14 +189,14 @@ function updateMainImage() {
   }, 150);
 }
 
-window.prevImage = function() {
+window.prevImage = function () {
   if (!currentProduct) return;
   currentImageIndex--;
   if (currentImageIndex < 0) currentImageIndex = currentProduct.images.length - 1;
   updateMainImage();
 };
 
-window.nextImage = function() {
+window.nextImage = function () {
   if (!currentProduct) return;
   currentImageIndex++;
   if (currentImageIndex >= currentProduct.images.length) currentImageIndex = 0;
